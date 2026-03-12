@@ -1,0 +1,15 @@
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\controller\DeptController.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\controller\EmpController.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\mapper\DeptMapper.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\mapper\EmpExprMapper.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\mapper\EmpMapper.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\pojo\Dept.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\pojo\Emp.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\pojo\EmpExpr.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\pojo\PageResult.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\pojo\Result.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\service\DeptService.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\service\EmpService.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\service\impl\DeptServiceImpl.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\service\impl\EmpServiceImpl.java
+D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\src\main\java\com\itheima\TliasWebManagementApplication.java
