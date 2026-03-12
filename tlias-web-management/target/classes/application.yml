@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: tlias-admin
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/tlias?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: shenziyan
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+#    mapper-locations: classpath*:mapper/*.xml
