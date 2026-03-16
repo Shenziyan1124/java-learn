@@ -18,6 +18,8 @@
         </encoder>
     </appender>
 
+    <logger name="com.itheima" level="INFO"/>
+
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>

@@ -5,6 +5,7 @@ import com.itheima.pojo.EmpQueryParam;
 import com.itheima.pojo.PageResult;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public interface EmpService {
 //    PageResult page(Integer page, Integer pageSize,
@@ -12,4 +13,8 @@ public interface EmpService {
     PageResult<Emp> page(EmpQueryParam empQueryParam);
 
     void addEmp(Emp emp);
+
+    void deleteEmp(List<Integer> ids);
+
+    Emp getById(Integer id);
 }

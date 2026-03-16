@@ -17,4 +17,7 @@ public interface EmpExprMapper {
 
         //@Insert("insert into emp_expr(emp_id, company, job, begin, end) values(#{empId}, #{company}, #{job}, #{begin}, #{end})")
     void addBatch(List<EmpExpr> exprList);
+
+    void deleteEmpExprByIds(List<Integer> ids);
+
 }

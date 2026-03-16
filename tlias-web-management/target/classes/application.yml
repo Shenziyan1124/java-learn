@@ -7,6 +7,12 @@ spring:
     username: root
     password: shenziyan
     driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+#      最大单个文件大小
+      max-file-size: 10MB
+#      最大请求大小 包含所有文件和表单数据
+      max-request-size: 10MB
 
 mybatis:
   configuration:
@@ -17,3 +23,13 @@ mybatis:
 logging:
   level:
     org.springframework.jdbc.support.JdbcTransactionManager: debug
+
+aliyun:
+  oss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    bucketName: java-web-ai-shen
+    region: cn-beijing
+
+#LTAI5t7tKy5xa48MNEhGKvKf
+#5hSzvgr4tecY4BuiVbBCWc4Mjavql0
+#
