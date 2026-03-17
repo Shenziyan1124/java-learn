@@ -3,11 +3,52 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itheima.mapper.EmpMapper">
+    <update id="updateEmp">
+        update emp
+        set
+        <if test="username != null and username !=''">username = #{username},</if>
+        <if test="name != null and name !=''">name = #{name},</if>
+        <if test="password != null and password !=''">password = #{password},</if>
+        <if test="gender != null and gender !=''">gender = #{gender},</if>
+        <if test="phone != null and phone !=''">phone = #{phone},</if>
+        <if test="job != null and job !=''">job = #{job},</if>
+        <if test="salary != null and salary !=''">salary = #{salary},</if>
+        <if test="image != null and image !=''">image = #{image},</if>
+        <if test="entry_date != null and entry_date !=''">entry_date = #{entry_date},</if>
+        <if test="dept_id != null and dept_id !=''">dept_id = #{dept_id},</if>
+        <if test="update_time != null and update_time !=''">update_time = #{update_time}</if>
+        where id = #{id}
+    </update>
 
-<!--    <insert id="addEmp" useGeneratedKeys="true" keyProperty="id">-->
-<!--        insert into emp(username, name, gender, phone, job, salary,image, entry_date, dept_id, create_time, update_time)-->
-<!--        values(#{username}, #{name}, #{gender}, #{phone}, #{job}, #{salary},#{image}, #{entryDate},#{deptId},#{createTime},#{updateTime} )-->
-<!--    </insert>-->
+
+    <select id="countEmpJobData">
+        SELECT case
+                   when job = 1 then '班主任'
+                   when job = 2 then '讲师'
+                   when job = 3 then '学工主管'
+                   when job = 4 then '教研主管'
+                   when job = 5 then '咨询师'
+                   else '其他' end as job,
+               count(*)            as num
+        from emp
+        group by job
+        order by num;
+    </select>
+
+    <select id="getEmpGenderData">
+        SELECT case
+            when gender = 1 then '男'
+            when gender = 2 then '女'
+            else '未知' end as gender,
+            count(*) as num
+        from emp
+        group by gender
+    </select>
+
+    <!--    <insert id="addEmp" useGeneratedKeys="true" keyProperty="id">-->
+    <!--        insert into emp(username, name, gender, phone, job, salary,image, entry_date, dept_id, create_time, update_time)-->
+    <!--        values(#{username}, #{name}, #{gender}, #{phone}, #{job}, #{salary},#{image}, #{entryDate},#{deptId},#{createTime},#{updateTime} )-->
+    <!--    </insert>-->
 
     <select id="list" resultType="com.itheima.pojo.Emp">
         select e.*,d.name deptName from emp e left join dept d on e.dept_id = d.id
@@ -51,16 +92,18 @@
 
     </resultMap>
     <select id="getById" resultMap="empResultMap">
-        select
-            e.*,
-            ee.id ee_id,
-            ee.emp_id ee_emp_id,
-            ee.begin ee_begin,
-            ee.end ee_end,
-            ee.job ee_job,
-            ee.company ee_company
-        from emp e left join emp_expr ee on e.id = ee.emp_id where e.id = #{id}
+        select e.*,
+               ee.id      ee_id,
+               ee.emp_id  ee_emp_id,
+               ee.begin   ee_begin,
+               ee.end     ee_end,
+               ee.job     ee_job,
+               ee.company ee_company
+        from emp e
+                 left join emp_expr ee on e.id = ee.emp_id
+        where e.id = #{id}
     </select>
+
 
     <delete id="deleteEmpByIds">
         delete from emp where id in
