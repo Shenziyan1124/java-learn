@@ -22,4 +22,6 @@ public interface EmpService {
     void updateEmp(Emp emp);
 
     List<EmpSimple> classTeacherList();
+
+    Integer countEmpByDeptId(Integer id);
 }

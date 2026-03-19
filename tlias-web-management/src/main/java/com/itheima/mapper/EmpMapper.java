@@ -76,5 +76,7 @@ public interface EmpMapper {
      * 获取班级教师列表
      * */
     List<EmpSimple> classTeacherList();
+
+    Integer countEmpByDeptId(Integer id);
 }
 

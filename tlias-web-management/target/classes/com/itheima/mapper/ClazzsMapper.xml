@@ -97,4 +97,11 @@
     </select>
 
 
+    <select id="getStudentCountData" resultType="java.util.Map">
+        select count(*) as student_count,c.name as clazz_name
+        from student s left join clazz c on clazz_id = c.id
+        group by clazz_id;
+    </select>
+
+
 </mapper>

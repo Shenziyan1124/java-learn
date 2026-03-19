@@ -6,6 +6,7 @@ import com.itheima.pojo.PageResult;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface ClazzsMapper {
@@ -22,4 +23,6 @@ public interface ClazzsMapper {
     List<Clazz> clazzsList();
 
     Integer countStudentByClazzId(Integer id);
+
+    List<Map<String, Object>> getStudentCountData();
 }

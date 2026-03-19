@@ -3,6 +3,7 @@ package com.itheima.service.impl;
 import com.itheima.mapper.DeptMapper;
 import com.itheima.pojo.Dept;
 import com.itheima.service.DeptService;
+import com.itheima.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,14 +15,24 @@ public class DeptServiceImpl implements DeptService {
 
     @Autowired
     private DeptMapper deptMapper;
+    @Autowired
+    private EmpService empService;
+
     @Override
     public List<Dept> findAllDept() {
-       return deptMapper.findAllDept();
+        return deptMapper.findAllDept();
     }
 
     @Override
     public void deleteDeptById(Integer id) {
-        deptMapper.deleteDeptById(id);
+
+        Integer count = empService.countEmpByDeptId(id);
+        if (count > 0) {
+            throw new RuntimeException("该部门下有员工,不能删除");
+        } else {
+            deptMapper.deleteDeptById(id);
+        }
+
     }
 
     @Override
@@ -34,7 +45,7 @@ public class DeptServiceImpl implements DeptService {
 
     @Override
     public Dept getInfo(Integer deptId) {
-       return deptMapper.getInfo(deptId);
+        return deptMapper.getInfo(deptId);
     }
 
     @Override

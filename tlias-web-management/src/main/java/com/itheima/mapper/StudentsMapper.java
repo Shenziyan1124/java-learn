@@ -5,6 +5,7 @@ import com.itheima.pojo.StudentsQueryParam;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface StudentsMapper {
@@ -19,4 +20,6 @@ public interface StudentsMapper {
     void deleteStudentByIds(List<Integer> ids);
 
     void violation(Integer id, Integer score);
+
+    List<Map<String, Object>> getStudentDegreeData();
 }

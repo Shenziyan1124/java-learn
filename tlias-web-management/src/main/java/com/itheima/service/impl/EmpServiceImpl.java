@@ -99,7 +99,11 @@ public class EmpServiceImpl implements EmpService {
 
     @Override
     public List<EmpSimple> classTeacherList() {
-
         return empMapper.classTeacherList();
+    }
+
+    @Override
+    public Integer countEmpByDeptId(Integer id) {
+        return empMapper.countEmpByDeptId(id);
     }
 }
