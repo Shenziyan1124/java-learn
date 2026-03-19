@@ -887,3 +887,850 @@
 2026-03-19 11:30:54.766 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2026-03-19 11:30:54.791 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
 2026-03-19 11:30:54.798 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.219 seconds (process running for 4.927)
+2026-03-19 13:34:02.032 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 13:34:02.051 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 13:34:02.146 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 93 ms
+2026-03-19 13:34:02.447 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - No static resource students for request '/students'.
+2026-03-19 13:34:02.625 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 13:34:04.220 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e26aa1f
+2026-03-19 13:34:04.227 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 13:34:46.796 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 13:34:46.811 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 13:34:46.828 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 13:34:46.856 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 13:34:57.642 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 23060 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 13:34:57.647 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 13:34:59.891 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 13:34:59.918 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:34:59.921 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 13:34:59.921 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 13:35:00.020 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2273 ms
+2026-03-19 13:35:01.504 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:35:01.562 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 13:35:01.574 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.797 seconds (process running for 8.066)
+2026-03-19 13:35:40.744 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 13:35:40.744 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 13:35:40.747 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-19 13:35:41.140 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 13:35:42.225 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19efd228
+2026-03-19 13:35:42.241 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 13:35:43.256 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 22
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select             s.id,             s.name, s.no,             IF(s.gender = 1, '男', '女') gender,             phone,             case (degree)                 when 1 then '初中'                 when 2 then '高中'                 when 3 then '大专'                 when 4 then '本科'                 when 5 then '硕士'                 when 6 then '博士'                 else '其他' end  degree,             s.id_card,             if(s.is_college = 1, '是', '否') is_college,             s.address,  s.graduation_date,s.violation_count,s.violation_score,             s.clazz_id, c.name as clazz_name, s.create_time, s.update_time         from student s left join clazz c on s.clazz_id = c.id                     ORDER BY c.create_time DESC;  LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 22
+; bad SQL grammar []
+2026-03-19 13:52:57.332 [http-nio-8080-exec-5] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 22
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select             s.id,             s.name, s.no,             IF(s.gender = 1, '男', '女') gender,             phone,             case (degree)                 when 1 then '初中'                 when 2 then '高中'                 when 3 then '大专'                 when 4 then '本科'                 when 5 then '硕士'                 when 6 then '博士'                 else '其他' end  degree,             s.id_card,             if(s.is_college = 1, '是', '否') is_college,             s.address,  s.graduation_date,s.violation_count,s.violation_score,             s.clazz_id, c.name as clazz_name, s.create_time, s.update_time         from student s left join clazz c on s.clazz_id = c.id                     ORDER BY c.create_time DESC;  LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 22
+; bad SQL grammar []
+2026-03-19 13:54:03.297 [http-nio-8080-exec-8] ERROR c.i.exception.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.itheima.pojo.StudentsQueryParam.getPage()" is null
+2026-03-19 13:54:18.962 [http-nio-8080-exec-9] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 5' at line 22
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select             s.id,             s.name, s.no,             IF(s.gender = 1, '男', '女') gender,             phone,             case (degree)                 when 1 then '初中'                 when 2 then '高中'                 when 3 then '大专'                 when 4 then '本科'                 when 5 then '硕士'                 when 6 then '博士'                 else '其他' end  degree,             s.id_card,             if(s.is_college = 1, '是', '否') is_college,             s.address,  s.graduation_date,s.violation_count,s.violation_score,             s.clazz_id, c.name as clazz_name, s.create_time, s.update_time         from student s left join clazz c on s.clazz_id = c.id                     ORDER BY c.create_time DESC;  LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 5' at line 22
+; bad SQL grammar []
+2026-03-19 13:56:06.414 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 13:56:06.486 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 13:56:06.551 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 13:56:06.677 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 13:56:14.311 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 36480 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 13:56:14.318 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 13:56:17.856 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 13:56:17.882 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:56:17.885 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 13:56:17.885 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 13:56:17.990 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3448 ms
+2026-03-19 13:56:19.503 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:56:19.536 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 13:56:19.545 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 7.281 seconds (process running for 9.913)
+2026-03-19 13:56:37.943 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 13:56:37.943 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 13:56:37.945 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 13:56:38.265 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 13:56:39.636 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46af6132
+2026-03-19 13:56:39.644 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 13:56:40.178 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - Error attempting to get column 'gender' from result set.  Cause: java.sql.SQLDataException: Cannot determine value type from string '男'
+; Cannot determine value type from string '男'
+2026-03-19 13:57:37.472 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 13:57:37.480 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 13:57:37.486 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 13:57:37.494 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 13:57:45.333 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 23416 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 13:57:45.339 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 13:57:47.255 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 13:57:47.281 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:57:47.284 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 13:57:47.285 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 13:57:47.391 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1965 ms
+2026-03-19 13:57:48.508 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:57:48.547 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 13:57:48.560 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.204 seconds (process running for 6.229)
+2026-03-19 13:57:53.965 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 13:57:53.965 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 13:57:53.969 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-19 13:57:54.340 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 13:57:54.971 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@347e8168
+2026-03-19 13:57:54.975 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 13:57:55.293 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - Error attempting to get column 'gender' from result set.  Cause: java.sql.SQLDataException: Cannot determine value type from string '男'
+; Cannot determine value type from string '男'
+2026-03-19 13:58:45.071 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 13:58:45.080 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 13:58:45.086 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 13:58:45.093 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 13:58:51.652 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 39796 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 13:58:51.657 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 13:58:53.938 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 13:58:53.970 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:58:53.974 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 13:58:53.974 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 13:58:54.102 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2364 ms
+2026-03-19 13:58:55.916 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:58:55.950 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 13:58:55.964 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 5.12 seconds (process running for 7.187)
+2026-03-19 13:58:56.670 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 13:58:56.670 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 13:58:56.673 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 13:58:56.964 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 13:58:57.590 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b579fc5
+2026-03-19 13:58:57.593 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 13:58:57.939 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - Error attempting to get column 'degree' from result set.  Cause: java.sql.SQLDataException: Cannot determine value type from string '硕士'
+; Cannot determine value type from string '硕士'
+2026-03-19 13:59:19.589 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 13:59:19.597 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 13:59:19.601 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 13:59:19.610 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 13:59:24.866 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 48276 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 13:59:24.874 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 13:59:26.787 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 13:59:26.814 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:59:26.817 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 13:59:26.817 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 13:59:26.923 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1930 ms
+2026-03-19 13:59:28.168 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:59:28.200 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 13:59:28.208 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.67 seconds (process running for 6.803)
+2026-03-19 13:59:32.187 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 13:59:32.188 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 13:59:32.191 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-19 13:59:32.484 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 13:59:33.567 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ebf28db
+2026-03-19 13:59:33.574 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 13:59:34.179 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - Error attempting to get column 'is_college' from result set.  Cause: java.sql.SQLDataException: Cannot determine value type from string '否'
+; Cannot determine value type from string '否'
+2026-03-19 13:59:52.895 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 13:59:52.903 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 13:59:52.908 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 13:59:52.917 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 13:59:57.514 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 40104 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 13:59:57.518 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 13:59:59.522 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 13:59:59.554 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 13:59:59.557 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 13:59:59.558 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 13:59:59.652 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2038 ms
+2026-03-19 14:00:01.285 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:00:01.319 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 14:00:01.329 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.692 seconds (process running for 6.923)
+2026-03-19 14:00:15.036 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:00:15.038 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:00:15.043 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-03-19 14:00:15.293 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 14:00:15.921 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a19b50b
+2026-03-19 14:00:15.924 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 14:05:04.869 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:05:04.944 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 14:05:04.983 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 14:05:05.040 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 14:05:14.566 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 47276 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 14:05:14.592 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:05:16.394 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 14:05:16.416 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:05:16.418 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 14:05:16.418 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 14:05:16.510 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1843 ms
+2026-03-19 14:05:17.660 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:05:17.685 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 14:05:17.694 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 5.133 seconds (process running for 7.507)
+2026-03-19 14:05:29.351 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:05:29.353 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:05:29.354 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 14:05:29.490 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 14:05:30.770 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7316e51e
+2026-03-19 14:05:30.776 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 14:05:37.126 [http-nio-8080-exec-5] INFO  c.itheima.controller.EmpController - 查询所有员工
+2026-03-19 14:05:37.141 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-19 14:05:37.142 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@1917375528 wrapping com.mysql.cj.jdbc.ConnectionImpl@52dd1059] for JDBC transaction
+2026-03-19 14:05:37.146 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@1917375528 wrapping com.mysql.cj.jdbc.ConnectionImpl@52dd1059] to manual commit
+2026-03-19 14:05:37.312 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-19 14:05:37.314 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1917375528 wrapping com.mysql.cj.jdbc.ConnectionImpl@52dd1059]
+2026-03-19 14:05:37.336 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1917375528 wrapping com.mysql.cj.jdbc.ConnectionImpl@52dd1059] after transaction
+2026-03-19 14:05:37.336 [http-nio-8080-exec-4] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-19 14:06:27.308 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:06:27.316 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 14:06:27.323 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 14:06:27.338 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 14:08:00.581 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 24272 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 14:08:00.587 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:08:02.268 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 14:08:02.290 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:08:02.291 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 14:08:02.291 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 14:08:02.374 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1695 ms
+2026-03-19 14:08:03.513 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:08:03.538 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 14:08:03.546 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.854 seconds (process running for 6.827)
+2026-03-19 14:08:26.156 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:08:26.156 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:08:26.158 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 14:08:26.418 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 14:08:27.407 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@282661cd
+2026-03-19 14:08:27.413 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 14:09:49.103 [http-nio-8080-exec-5] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=ces, no=1101101101, gender=1, phone=13383234444, idCard=130406198812020102, isCollege=1, address=ces, degree=1, graduationDate=2026-03-11, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 14:09:50.069 [http-nio-8080-exec-5] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'violation_count' cannot be null
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (                              name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, violation_count, violation_score, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?,                 ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'violation_count' cannot be null
+; Column 'violation_count' cannot be null
+2026-03-19 14:11:35.298 [http-nio-8080-exec-7] ERROR c.i.exception.GlobalExceptionHandler - JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "quis et ut consectetur laborum": not a valid `java.lang.Integer` value
+2026-03-19 14:11:52.745 [http-nio-8080-exec-8] ERROR c.i.exception.GlobalExceptionHandler - JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "quis et ut consectetur laborum": not a valid `java.lang.Integer` value
+2026-03-19 14:13:03.440 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=阿大0, no=2024010801, gender=1, phone=15909091235, idCard=159090912351590909, isCollege=1, address=昌平回龙观, degree=4, graduationDate=2024-01-01, clazzId=9, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 14:13:03.759 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'violation_count' cannot be null
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (                              name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, violation_count, violation_score, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?,                 ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'violation_count' cannot be null
+; Column 'violation_count' cannot be null
+2026-03-19 14:14:09.202 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:14:09.245 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 14:14:09.290 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 14:14:09.348 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 14:14:17.142 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 43360 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 14:14:17.191 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:14:21.040 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 14:14:21.062 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:14:21.063 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 14:14:21.065 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 14:14:21.180 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3863 ms
+2026-03-19 14:14:22.974 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:14:23.044 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 14:14:23.057 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 7.713 seconds (process running for 10.796)
+2026-03-19 14:14:23.742 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:14:23.744 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:14:23.747 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 14:14:23.996 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=阿大0, no=2024010801, gender=1, phone=15909091235, idCard=159090912351590909, isCollege=1, address=昌平回龙观, degree=4, graduationDate=2024-01-01, clazzId=9, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 14:14:24.048 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 14:14:25.028 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41d42530
+2026-03-19 14:14:25.034 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 14:15:12.636 [http-nio-8080-exec-3] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=ces, no=1101101101, gender=1, phone=13383234444, idCard=130406198812020102, isCollege=1, address=ces, degree=1, graduationDate=2026-03-11, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 14:19:15.742 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:19:15.824 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 14:19:15.876 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 14:19:15.997 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 14:19:25.668 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 39328 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 14:19:25.673 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:19:27.677 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 14:19:27.700 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:19:27.704 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 14:19:27.704 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 14:19:27.796 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2032 ms
+2026-03-19 14:19:29.513 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:19:29.541 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 14:19:29.551 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.774 seconds (process running for 7.702)
+2026-03-19 14:19:46.703 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:19:46.703 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:19:46.705 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 14:19:46.781 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - id查询学生信息:20
+2026-03-19 14:19:46.834 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 14:19:47.812 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d606f46
+2026-03-19 14:19:47.817 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 14:19:51.551 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - id查询学生信息:20
+2026-03-19 14:21:59.586 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:21:59.598 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 14:21:59.607 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 14:21:59.619 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 14:22:08.482 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 22224 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 14:22:08.490 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:22:10.458 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 14:22:10.494 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:22:10.495 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 14:22:10.497 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 14:22:10.605 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2005 ms
+2026-03-19 14:22:12.864 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:22:12.916 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 14:22:12.930 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 5.559 seconds (process running for 8.106)
+2026-03-19 14:22:19.828 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:22:19.828 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:22:19.831 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 14:22:19.998 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 14:22:21.608 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11e8b92d
+2026-03-19 14:22:21.613 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 14:22:24.482 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - id查询学生信息:20
+2026-03-19 14:22:31.292 [http-nio-8080-exec-6] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=ces1, no=1101101101, gender=1, phone=13383234444, idCard=130406198812020102, isCollege=1, address=ces1, degree=1, graduationDate=2026-03-11, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 14:22:32.277 [http-nio-8080-exec-6] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1101101101' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1101101101' for key 'student.no'
+; Duplicate entry '1101101101' for key 'student.no'
+2026-03-19 14:28:16.955 [http-nio-8080-exec-5] INFO  c.itheima.controller.EmpController - 查询所有员工
+2026-03-19 14:28:16.984 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-19 14:28:16.986 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@1652824225 wrapping com.mysql.cj.jdbc.ConnectionImpl@11e8b92d] for JDBC transaction
+2026-03-19 14:28:16.993 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@1652824225 wrapping com.mysql.cj.jdbc.ConnectionImpl@11e8b92d] to manual commit
+2026-03-19 14:28:17.073 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-19 14:28:17.074 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1652824225 wrapping com.mysql.cj.jdbc.ConnectionImpl@11e8b92d]
+2026-03-19 14:28:17.082 [http-nio-8080-exec-4] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1652824225 wrapping com.mysql.cj.jdbc.ConnectionImpl@11e8b92d] after transaction
+2026-03-19 14:28:17.084 [http-nio-8080-exec-4] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-19 14:28:23.813 [http-nio-8080-exec-9] INFO  c.itheima.controller.EmpController - 分页查询,参数:EmpQueryParam(page=1, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-03-19 14:28:24.995 [http-nio-8080-exec-1] INFO  c.itheima.controller.EmpController - 查询员工,参数:72
+2026-03-19 14:51:48.102 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:51:48.184 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 14:51:48.243 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 14:51:48.272 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 14:52:00.290 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 38720 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 14:52:00.302 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:52:02.546 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 14:52:02.582 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:52:02.588 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 14:52:02.590 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 14:52:02.777 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2354 ms
+2026-03-19 14:52:04.578 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:52:04.623 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 14:52:04.640 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 5.389 seconds (process running for 7.804)
+2026-03-19 14:52:11.733 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:52:11.734 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:52:11.736 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 14:52:11.881 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 14:52:12.762 [http-nio-8080-exec-3] INFO  c.itheima.controller.EmpController - 分页查询,参数:EmpQueryParam(page=1, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-03-19 14:52:13.057 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2832526d
+2026-03-19 14:52:13.065 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 14:52:20.698 [http-nio-8080-exec-8] INFO  c.i.controller.StudentsController - id查询学生信息:20
+2026-03-19 14:52:24.794 [http-nio-8080-exec-7] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=ces1, no=1101101101, gender=1, phone=13383234444, idCard=130406198812020102, isCollege=1, address=ces, degree=1, graduationDate=2026-03-11, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 14:52:25.751 [http-nio-8080-exec-7] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1101101101' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1101101101' for key 'student.no'
+; Duplicate entry '1101101101' for key 'student.no'
+2026-03-19 14:59:59.774 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:59:59.941 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:00:00.089 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:00:00.359 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:00:12.137 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 35324 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:00:12.142 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:00:13.957 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:00:13.979 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:00:13.982 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:00:13.983 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:00:14.072 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1839 ms
+2026-03-19 15:00:15.348 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:00:15.376 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:00:15.384 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.128 seconds (process running for 6.554)
+2026-03-19 15:00:24.998 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:00:24.998 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:00:25.000 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:00:25.282 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:00:26.492 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bb30186
+2026-03-19 15:00:26.496 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:00:32.378 [http-nio-8080-exec-8] ERROR c.i.exception.GlobalExceptionHandler - Request method 'DELETE' is not supported
+2026-03-19 15:01:59.008 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:01:59.020 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:01:59.032 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:01:59.051 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:02:05.155 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 33276 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:02:05.161 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:02:06.896 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:02:06.921 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:02:06.922 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:02:06.924 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:02:07.023 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1778 ms
+2026-03-19 15:02:08.190 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:02:08.232 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:02:08.249 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.985 seconds (process running for 6.312)
+2026-03-19 15:02:15.554 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:02:15.554 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:02:15.556 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:02:15.588 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - Request method 'DELETE' is not supported
+2026-03-19 15:02:33.485 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - Request method 'DELETE' is not supported
+2026-03-19 15:03:08.611 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:03:08.625 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:03:16.833 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 41424 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:03:16.839 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:03:19.056 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:03:19.079 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:03:19.081 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:03:19.081 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:03:19.179 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2234 ms
+2026-03-19 15:03:20.465 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:03:20.496 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:03:20.506 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.564 seconds (process running for 6.655)
+2026-03-19 15:03:26.605 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:03:26.607 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:03:26.609 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:03:26.650 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - Request method 'DELETE' is not supported
+2026-03-19 15:06:21.167 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:06:21.189 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:06:32.123 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 24064 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:06:32.128 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:06:33.986 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:06:34.008 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:06:34.012 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:06:34.012 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:06:34.105 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1885 ms
+2026-03-19 15:06:35.230 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:06:35.259 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:06:35.266 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.809 seconds (process running for 6.782)
+2026-03-19 15:06:43.154 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:06:43.154 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:06:43.156 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:06:43.223 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - Required request parameter 'ids' for method parameter type List is not present
+2026-03-19 15:06:53.961 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - Required request parameter 'ids' for method parameter type List is not present
+2026-03-19 15:08:48.552 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:08:48.680 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:08:59.078 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 25536 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:08:59.084 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:09:01.189 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:09:01.224 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:09:01.228 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:09:01.228 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:09:01.357 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2159 ms
+2026-03-19 15:09:02.995 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:09:03.032 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:09:03.042 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.718 seconds (process running for 6.957)
+2026-03-19 15:09:09.512 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:09:09.512 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:09:09.514 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:09:09.698 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:09:10.864 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bb0831f
+2026-03-19 15:09:10.871 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:09:16.196 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - Request method 'DELETE' is not supported
+2026-03-19 15:09:34.317 [http-nio-8080-exec-4] ERROR c.i.exception.GlobalExceptionHandler - Request method 'DELETE' is not supported
+2026-03-19 15:11:39.400 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:11:39.433 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:11:39.500 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:11:39.531 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:11:55.741 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 37528 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:11:55.748 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:11:59.052 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:11:59.078 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:11:59.087 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:11:59.089 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:11:59.201 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3324 ms
+2026-03-19 15:12:01.528 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:12:01.608 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:12:01.661 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 6.96 seconds (process running for 12.694)
+2026-03-19 15:12:09.305 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:12:09.305 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:12:09.308 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-19 15:12:09.375 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - Required request parameter 'ids' for method parameter type String is not present
+2026-03-19 15:13:00.239 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:13:00.251 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:13:08.668 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 40372 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:13:08.675 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:13:10.641 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:13:10.668 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:13:10.671 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:13:10.671 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:13:10.774 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1979 ms
+2026-03-19 15:13:12.203 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:13:12.233 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:13:12.246 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.95 seconds (process running for 7.121)
+2026-03-19 15:13:18.459 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:13:18.459 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:13:18.461 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:13:18.545 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 删除学生信息:20,19
+2026-03-19 15:13:18.629 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: org.apache.ibatis.builder.BuilderException: Error evaluating expression 'ids'.  Return value (20,19) was not iterable.
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve com.itheima.mapper.StudentsMapper.deleteStudentByIds
+### The error occurred while executing an update
+### Cause: org.apache.ibatis.builder.BuilderException: Error evaluating expression 'ids'.  Return value (20,19) was not iterable.
+2026-03-19 15:14:04.718 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:14:04.751 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:14:12.793 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 45720 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:14:12.798 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:14:14.739 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:14:14.761 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:14:14.762 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:14:14.762 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:14:14.853 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1953 ms
+2026-03-19 15:14:16.061 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:14:16.093 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:14:16.104 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.377 seconds (process running for 6.399)
+2026-03-19 15:14:25.505 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:14:25.506 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:14:25.508 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:14:25.596 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 删除学生信息:20,19
+2026-03-19 15:14:25.666 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:14:26.608 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52502913
+2026-03-19 15:14:26.613 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:14:27.521 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/>' at line 8
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: delete FROM student         WHERE id IN          (               ?          ,              ?          )          />
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/>' at line 8
+; bad SQL grammar []
+2026-03-19 15:15:12.366 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:15:12.374 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:15:12.381 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:15:12.389 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:15:17.648 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 10044 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:15:17.652 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:15:20.125 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:15:20.150 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:15:20.152 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:15:20.152 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:15:20.255 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2514 ms
+2026-03-19 15:15:21.515 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:15:21.547 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:15:21.558 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.748 seconds (process running for 7.113)
+2026-03-19 15:15:48.447 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:15:48.449 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:15:48.452 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:15:48.559 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 删除学生信息:20,19
+2026-03-19 15:15:48.657 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:15:49.581 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4872a5db
+2026-03-19 15:15:49.586 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:20:30.047 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:20:30.140 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:20:30.197 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:20:30.302 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:20:38.794 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 42708 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:20:38.804 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:20:40.841 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:20:40.867 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:20:40.870 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:20:40.870 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:20:40.970 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2035 ms
+2026-03-19 15:20:42.456 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:20:42.487 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:20:42.495 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.535 seconds (process running for 6.859)
+2026-03-19 15:20:46.146 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:20:46.148 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:20:46.149 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 15:20:53.119 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 学生id:18,扣分:1
+2026-03-19 15:20:53.162 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:20:53.183 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:20:54.524 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27fbed78
+2026-03-19 15:20:54.527 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:20:54.836 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: SQL String cannot be empty
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve com.itheima.mapper.StudentsMapper.violation
+### The error occurred while executing an update
+### SQL: 
+### Cause: java.sql.SQLException: SQL String cannot be empty
+; SQL String cannot be empty
+2026-03-19 15:20:54.995 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:20:55.149 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:20:55.185 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:22:58.291 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 42412 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:22:58.299 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:23:00.424 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:23:00.454 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:23:00.457 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:23:00.458 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:23:00.569 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2159 ms
+2026-03-19 15:23:01.861 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:23:01.900 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:23:01.909 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.722 seconds (process running for 7.193)
+2026-03-19 15:23:09.986 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:23:09.987 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:23:09.990 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-19 15:23:10.326 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:23:11.454 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@422da218
+2026-03-19 15:23:11.504 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:23:31.142 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 学生id:18,扣分:1
+2026-03-19 15:23:50.430 [http-nio-8080-exec-4] INFO  c.i.controller.StudentsController - 学生id:18,扣分:2
+2026-03-19 15:25:20.211 [http-nio-8080-exec-6] INFO  c.i.controller.StudentsController - id查询学生信息:18
+2026-03-19 15:26:10.397 [http-nio-8080-exec-9] INFO  c.i.controller.StudentsController - id查询学生信息:18
+2026-03-19 15:26:13.371 [http-nio-8080-exec-10] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=郑成功, no=2024001101, gender=1, phone=13309092345, idCard=110110110110110110, isCollege=0, address=北京市昌平区回龙观街道88号, degree=5, graduationDate=2021-07-01, clazzId=1, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:26:14.198 [http-nio-8080-exec-10] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+; Duplicate entry '2024001101' for key 'student.no'
+2026-03-19 15:29:04.711 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:29:04.753 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:29:04.792 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:29:04.920 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:29:14.886 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 48456 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:29:14.891 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:29:16.866 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:29:16.889 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:29:16.892 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:29:16.892 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:29:16.995 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2014 ms
+2026-03-19 15:29:18.433 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:29:18.472 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:29:18.483 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.499 seconds (process running for 6.743)
+2026-03-19 15:29:23.402 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:29:23.402 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:29:23.403 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 15:29:23.599 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=郑成功, no=2024001101, gender=1, phone=13309092345, idCard=110110110110110110, isCollege=0, address=北京市昌平区回龙观街道88号, degree=5, graduationDate=2021-07-01, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:29:23.649 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:29:25.343 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69e484c3
+2026-03-19 15:29:25.347 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:29:27.156 [http-nio-8080-exec-2] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+; Duplicate entry '2024001101' for key 'student.no'
+2026-03-19 15:29:41.540 [http-nio-8080-exec-4] INFO  c.i.controller.StudentsController - id查询学生信息:18
+2026-03-19 15:29:47.851 [http-nio-8080-exec-5] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=郑成功, no=2024001101, gender=1, phone=13309092345, idCard=110110110110110110, isCollege=0, address=北京市昌平区回龙观街道88号, degree=5, graduationDate=2021-07-01, clazzId=1, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:29:47.860 [http-nio-8080-exec-5] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+; Duplicate entry '2024001101' for key 'student.no'
+2026-03-19 15:30:44.996 [http-nio-8080-exec-9] INFO  c.i.controller.StudentsController - 添加学生信息:Student(id=null, name=郑成功, no=2024001101, gender=1, phone=13309092345, idCard=110110110110110110, isCollege=0, address=北京市昌平区回龙观街道88号, degree=5, graduationDate=2021-07-01, clazzId=1, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:30:45.004 [http-nio-8080-exec-9] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+; Duplicate entry '2024001101' for key 'student.no'
+2026-03-19 15:31:49.421 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:31:49.436 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:31:49.447 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:31:49.463 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:32:01.366 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 44988 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:32:01.371 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:32:04.772 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:32:04.803 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:32:04.806 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:32:04.808 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:32:04.945 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3384 ms
+2026-03-19 15:32:05.802 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'studentsController' method 
+com.itheima.controller.StudentsController#addStudent(Student)
+to {POST [/students]}: There is already 'studentsController' bean method
+com.itheima.controller.StudentsController#save(Student) mapped.
+2026-03-19 15:32:05.808 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-03-19 15:32:05.819 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-19 15:32:05.841 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'studentsController' method 
+com.itheima.controller.StudentsController#addStudent(Student)
+to {POST [/students]}: There is already 'studentsController' bean method
+com.itheima.controller.StudentsController#save(Student) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.itheima.TliasWebManagementApplication.main(TliasWebManagementApplication.java:11)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'studentsController' method 
+com.itheima.controller.StudentsController#addStudent(Student)
+to {POST [/students]}: There is already 'studentsController' bean method
+com.itheima.controller.StudentsController#save(Student) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	... 18 common frames omitted
+2026-03-19 15:34:30.202 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 34144 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:34:30.213 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:34:32.025 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:34:32.047 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:34:32.049 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:34:32.049 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:34:32.138 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1735 ms
+2026-03-19 15:34:33.389 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:34:33.423 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:34:33.435 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.523 seconds (process running for 6.561)
+2026-03-19 15:34:45.083 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:34:45.083 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:34:45.090 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-03-19 15:34:45.474 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=郑成功, no=2024001101, gender=1, phone=13309092345, idCard=110110110110110110, isCollege=0, address=北京市昌平区回龙观街道88号, degree=5, graduationDate=2021-07-01, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:34:45.483 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 执行添加操作
+2026-03-19 15:34:45.523 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:34:46.402 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dbe2e4a
+2026-03-19 15:34:46.405 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:34:47.266 [http-nio-8080-exec-1] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2024001101' for key 'student.no'
+; Duplicate entry '2024001101' for key 'student.no'
+2026-03-19 15:35:29.961 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=1, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:35:29.961 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 执行添加操作
+2026-03-19 15:35:34.817 [http-nio-8080-exec-4] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:35:37.495 [http-nio-8080-exec-5] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:35:37.495 [http-nio-8080-exec-5] INFO  c.i.controller.StudentsController - 执行添加操作
+2026-03-19 15:35:37.506 [http-nio-8080-exec-5] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1111111111' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1111111111' for key 'student.no'
+; Duplicate entry '1111111111' for key 'student.no'
+2026-03-19 15:36:07.040 [http-nio-8080-exec-6] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:36:07.040 [http-nio-8080-exec-6] INFO  c.i.controller.StudentsController - 执行添加操作
+2026-03-19 15:36:07.048 [http-nio-8080-exec-6] ERROR c.i.exception.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1111111111' for key 'student.no'
+### The error may exist in com/itheima/mapper/StudentsMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT into student (name, no, gender, phone, degree, id_card, is_college, address,                              graduation_date, clazz_id, create_time, update_time)         values (?, ?, ?, ?, ?, ?,                 ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1111111111' for key 'student.no'
+; Duplicate entry '1111111111' for key 'student.no'
+2026-03-19 15:36:44.946 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:36:44.953 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:36:44.957 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:36:44.967 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:36:52.701 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 48728 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:36:52.707 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:36:54.538 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:36:54.562 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:36:54.565 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:36:54.566 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:36:54.660 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1856 ms
+2026-03-19 15:36:55.879 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:36:55.910 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:36:55.917 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.313 seconds (process running for 6.317)
+2026-03-19 15:37:02.598 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:37:02.598 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:37:02.601 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:37:02.783 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:37:02.788 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - 执行修改操作，id:null
+2026-03-19 15:37:02.845 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:37:03.432 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75c2f5a7
+2026-03-19 15:37:03.435 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:37:06.258 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:37:08.730 [http-nio-8080-exec-4] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:37:08.731 [http-nio-8080-exec-4] INFO  c.i.controller.StudentsController - 执行修改操作，id:null
+2026-03-19 15:37:12.615 [http-nio-8080-exec-8] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:37:14.812 [http-nio-8080-exec-7] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:37:14.812 [http-nio-8080-exec-7] INFO  c.i.controller.StudentsController - 执行修改操作，id:null
+2026-03-19 15:37:56.530 [http-nio-8080-exec-9] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:37:58.507 [http-nio-8080-exec-10] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=4, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:37:58.508 [http-nio-8080-exec-10] INFO  c.i.controller.StudentsController - 执行修改操作，id:null
+2026-03-19 15:38:47.552 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:38:47.558 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:38:47.562 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:38:47.570 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:38:52.560 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 41596 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:38:52.565 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:38:54.221 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:38:54.243 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:38:54.245 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:38:54.245 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:38:54.336 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1694 ms
+2026-03-19 15:38:55.454 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:38:55.501 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:38:55.514 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.755 seconds (process running for 6.0)
+2026-03-19 15:38:59.306 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:38:59.308 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:38:59.311 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-19 15:38:59.429 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:38:59.476 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:39:00.088 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7356e03b
+2026-03-19 15:39:00.092 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:39:02.988 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:39:02.997 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 执行修改操作，id:null
+2026-03-19 15:39:59.990 [http-nio-8080-exec-4] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:40:01.934 [http-nio-8080-exec-5] INFO  c.i.controller.StudentsController - 保存学生信息:Student(id=null, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
+2026-03-19 15:40:01.935 [http-nio-8080-exec-5] INFO  c.i.controller.StudentsController - 执行修改操作，id:null
+2026-03-19 15:42:33.275 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m33s60ms628µs600ns).
+2026-03-19 15:42:33.278 [http-nio-8080-exec-8] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:42:33.407 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:42:33.422 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:42:33.442 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:42:33.460 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:42:39.410 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 47320 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:42:39.416 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:42:41.450 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:42:41.475 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:42:41.480 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:42:41.480 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:42:41.584 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2016 ms
+2026-03-19 15:42:42.892 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:42:42.924 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:42:42.933 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.38 seconds (process running for 7.303)
+2026-03-19 15:42:48.312 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:42:48.312 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:42:48.314 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-19 15:42:48.395 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - id查询学生信息:18
+2026-03-19 15:42:48.445 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:42:49.302 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1da5096a
+2026-03-19 15:42:49.306 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:43:19.167 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 15:43:19.172 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-19 15:43:19.177 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-19 15:43:19.186 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-19 15:43:24.006 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 28780 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-19 15:43:24.011 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-19 15:43:25.518 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-19 15:43:25.538 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:43:25.541 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-19 15:43:25.541 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19 15:43:25.616 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1540 ms
+2026-03-19 15:43:26.823 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 15:43:26.848 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-19 15:43:26.855 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.504 seconds (process running for 5.366)
+2026-03-19 15:43:32.262 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 15:43:32.263 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-19 15:43:32.265 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-19 15:43:32.338 [http-nio-8080-exec-1] INFO  c.i.controller.StudentsController - id查询学生信息:28
+2026-03-19 15:43:32.379 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-19 15:43:32.974 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50b5d6c2
+2026-03-19 15:43:32.978 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-19 15:43:39.864 [http-nio-8080-exec-2] INFO  c.i.controller.StudentsController - 修改学生信息 (PUT):Student(id=28, name=111, no=1111111111, gender=1, phone=15024845212, idCard=130406192220202020, isCollege=1, address=1, degree=1, graduationDate=2026-03-04, clazzId=2, violationCount=null, violationScore=null, createTime=null, updateTime=null, clazzName=null)
