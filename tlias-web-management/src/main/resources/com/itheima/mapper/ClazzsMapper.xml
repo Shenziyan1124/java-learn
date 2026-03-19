@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.ClazzsMapper">
+
+    <!-- 分页查询班级列表 -->
+    <resultMap id="clazzResultMap" type="com.itheima.pojo.Clazz">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="room" column="room"/>
+        <result property="beginDate" column="begin_date"/>
+        <result property="endDate" column="end_date"/>
+        <result property="masterId" column="master_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="masterName" column="master_name"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <select id="findAllClazzs" resultMap="clazzResultMap">
+        SELECT
+        c.id,
+        c.name,
+        c.room,
+        c.begin_date,
+        c.end_date,
+        c.master_id,
+        c.create_time,
+        c.update_time,
+        e.name AS master_name,
+        CASE
+        WHEN NOW() > c.end_date THEN '已毕业'
+        WHEN NOW() &lt; c.begin_date THEN '未开班'
+        ELSE '在读中'
+        END AS status
+        FROM clazz c
+        LEFT JOIN emp e ON c.master_id = e.id
+        <where>
+            <if test="name != null and name != ''">
+                AND c.name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="begin != null and end != null">
+                and c.begin_date between #{begin} and #{end}
+            </if>
+        </where>
+        ORDER BY c.create_time DESC
+    </select>
+
+    <delete id="deleteClazzById">
+        DELETE
+        FROM clazz
+        WHERE id = #{id}
+    </delete>
+
+    <insert id="addClazz">
+        INSERT INTO clazz (name, room, begin_date, end_date, master_id, subject, create_time, update_time)
+        VALUES (#{name}, #{room}, #{beginDate}, #{endDate}, #{masterId}, #{subject}, #{createTime}, #{updateTime})
+    </insert>
+
+    <select id="getClazzById" resultType="com.itheima.pojo.Clazz">
+        SELECT *
+        FROM clazz
+        WHERE id = #{id}
+    </select>
+
+
+    <update id="updateClazzById">
+        UPDATE clazz
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="room != null">
+                room = #{room},
+            </if>
+            <if test="beginDate != null">
+                begin_date = #{beginDate},
+            </if>
+            <if test="endDate != null">
+                end_date = #{endDate},
+            </if>
+            <if test="masterId != null">
+                master_id = #{masterId},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+
+    <select id="clazzsList" resultType="com.itheima.pojo.Clazz">
+        select * from clazz;
+    </select>
+
+    <select id="countStudentByClazzId" resultType="integer">
+        select count(*) from student where clazz_id = #{clazzId};
+    </select>
+
+
+</mapper>

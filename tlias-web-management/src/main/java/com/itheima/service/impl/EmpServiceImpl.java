@@ -4,10 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.itheima.mapper.EmpExprMapper;
 import com.itheima.mapper.EmpMapper;
-import com.itheima.pojo.Emp;
-import com.itheima.pojo.EmpExpr;
-import com.itheima.pojo.EmpQueryParam;
-import com.itheima.pojo.PageResult;
+import com.itheima.pojo.*;
 import com.itheima.service.EmpService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.javassist.compiler.ast.Expr;
@@ -98,5 +95,11 @@ public class EmpServiceImpl implements EmpService {
             empExprMapper.addBatch(empExprList);
         }
 
+    }
+
+    @Override
+    public List<EmpSimple> classTeacherList() {
+
+        return empMapper.classTeacherList();
     }
 }

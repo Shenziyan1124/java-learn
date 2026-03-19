@@ -28,9 +28,8 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public List<Map<String, Object>> getEmpGenderData() {
-        List<Map<String, Object>> list = empMapper.getEmpGenderData();
 
 
-        return null;
+        return empMapper.getEmpGenderData();
     }
 }

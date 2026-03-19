@@ -2,6 +2,7 @@ package com.itheima.mapper;
 
 import com.itheima.pojo.Emp;
 import com.itheima.pojo.EmpQueryParam;
+import com.itheima.pojo.EmpSimple;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -68,7 +69,12 @@ public interface EmpMapper {
     /**
      * 统计员工性别人数
      * */
-
+    @MapKey("name")
     List<Map<String, Object>> getEmpGenderData();
+
+    /**
+     * 获取班级教师列表
+     * */
+    List<EmpSimple> classTeacherList();
 }
 

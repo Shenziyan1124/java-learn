@@ -1,9 +1,6 @@
 package com.itheima.controller;
 
-import com.itheima.pojo.Emp;
-import com.itheima.pojo.EmpQueryParam;
-import com.itheima.pojo.PageResult;
-import com.itheima.pojo.Result;
+import com.itheima.pojo.*;
 import com.itheima.service.EmpService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,6 +88,14 @@ public class EmpController {
         log.info("修改员工,参数:{}", emp);
         empService.updateEmp(emp);
         return Result.success();
+    }
+
+
+    @GetMapping("/list")
+    public Result classTeacherList() {
+        log.info("查询所有员工");
+        List<EmpSimple> list = empService.classTeacherList();
+        return Result.success(list);
     }
 
 }
