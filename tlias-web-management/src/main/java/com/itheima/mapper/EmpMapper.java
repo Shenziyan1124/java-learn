@@ -3,6 +3,7 @@ package com.itheima.mapper;
 import com.itheima.pojo.Emp;
 import com.itheima.pojo.EmpQueryParam;
 import com.itheima.pojo.EmpSimple;
+import com.itheima.pojo.LoginInfor;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -78,5 +79,7 @@ public interface EmpMapper {
     List<EmpSimple> classTeacherList();
 
     Integer countEmpByDeptId(Integer id);
+
+    Emp selectByUserAndPwd(Emp emp);
 }
 

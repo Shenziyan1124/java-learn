@@ -1,9 +1,6 @@
 package com.itheima.service;
 
-import com.itheima.pojo.Emp;
-import com.itheima.pojo.EmpQueryParam;
-import com.itheima.pojo.EmpSimple;
-import com.itheima.pojo.PageResult;
+import com.itheima.pojo.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -24,4 +21,6 @@ public interface EmpService {
     List<EmpSimple> classTeacherList();
 
     Integer countEmpByDeptId(Integer id);
+
+    LoginInfor login(Emp emp);
 }

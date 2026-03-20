@@ -5,7 +5,6 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.itheima.mapper.ClazzsMapper;
 import com.itheima.pojo.Clazz;
-import com.itheima.exception.BusinessException;
 import com.itheima.pojo.EmpQueryParam;
 import com.itheima.pojo.PageResult;
 import com.itheima.service.ClazzsService;
@@ -49,7 +48,7 @@ public class ClazzsServiceImpl implements ClazzsService {
         Integer count = clazzsMapper.countStudentByClazzId(id);
         log.info("班级下有学生:{}", count);
         if (count > 0) {
-            throw new BusinessException("该班级下有学生，不能删除");
+            throw new RuntimeException("班级下有学生,不能删除");
         }
         clazzsMapper.deleteClazzById(id);
     }

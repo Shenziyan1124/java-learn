@@ -4,29 +4,29 @@ import lombok.Data;
 
 @Data
 public class Result {
-    private String message;
+    private String msg;
     private Object data;
     private Integer code;
 
     public static Result success(){
         Result result = new Result();
         result.code = 1;
-        result.message = "操作成功";
+        result.msg = "操作成功";
         return result;
     }
 
     public static  Result success(Object data){
         Result result = new Result();
         result.code = 1;
-        result.message = "操作成功";
+        result.msg = "操作成功";
         result.data = data;
         return result;
     }
 
-    public static Result error(String message){
+    public static Result error(String msg){
         Result result = new Result();
         result.code = 0;
-        result.message = message;
+        result.msg = msg;
         return result;
     }
 

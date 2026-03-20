@@ -126,4 +126,9 @@
         where dept_id = #{deptId}
     </select>
 
+
+    <select id="selectByUserAndPwd" resultType="com.itheima.pojo.Emp">
+        select id,username,name from emp where username = #{username} and password = #{password}
+    </select>
+
 </mapper>

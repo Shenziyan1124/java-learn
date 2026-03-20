@@ -6,6 +6,7 @@ import com.itheima.mapper.EmpExprMapper;
 import com.itheima.mapper.EmpMapper;
 import com.itheima.pojo.*;
 import com.itheima.service.EmpService;
+import com.itheima.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.javassist.compiler.ast.Expr;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,9 @@ import org.springframework.util.CollectionUtils;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Service
@@ -88,7 +91,7 @@ public class EmpServiceImpl implements EmpService {
         //2.2 添加员工对应的员工入职信息
         //循环为每个员工入职信息添加员工id
         List<EmpExpr> empExprList = emp.getExprList();
-        if (!CollectionUtils.isEmpty(empExprList)){
+        if (!CollectionUtils.isEmpty(empExprList)) {
             empExprList.forEach(empExpr -> {
                 empExpr.setEmpId(emp.getId());
             });
@@ -105,5 +108,23 @@ public class EmpServiceImpl implements EmpService {
     @Override
     public Integer countEmpByDeptId(Integer id) {
         return empMapper.countEmpByDeptId(id);
+    }
+
+    @Override
+    public LoginInfor login(Emp emp) {
+        Emp e = empMapper.selectByUserAndPwd(emp);
+        if (e != null) {
+
+            Map<String, Object> claims = new HashMap<>();
+            claims.put("id", e.getId());
+            claims.put("username", e.getUsername());
+            claims.put("name", e.getName());
+
+            String token = JwtUtils.generateToken(claims);
+            return new LoginInfor(e.getId(), e.getUsername(), e.getName(), token);
+        }
+        // return empMapper.selectByUserAndPwd(emp);
+
+        return null;
     }
 }
