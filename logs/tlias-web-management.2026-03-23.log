@@ -1,0 +1,382 @@
+2026-03-23 16:38:16.574 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 26748 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-23 16:38:16.591 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-23 16:38:19.320 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-23 16:38:19.342 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:38:19.347 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-23 16:38:19.348 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-23 16:38:19.439 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2716 ms
+2026-03-23 16:38:21.759 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:38:21.788 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-23 16:38:21.799 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 6.158 seconds (process running for 9.214)
+2026-03-23 16:38:34.638 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-23 16:38:34.638 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-23 16:38:34.639 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-23 16:38:34.669 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:41.968 [http-nio-8080-exec-2] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:41.969 [http-nio-8080-exec-2] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:41.970 [http-nio-8080-exec-2] INFO  c.itheima.controller.LoginController - 用户登录Emp(id=null, username=songjiang, password=123456, name=null, gender=null, phone=null, job=null, salary=null, image=null, entryDate=null, deptId=null, createTime=null, updateTime=null, deptName=null, exprList=null)
+2026-03-23 16:38:42.011 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-23 16:38:42.667 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bfc879a
+2026-03-23 16:38:42.670 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-23 16:38:42.829 [http-nio-8080-exec-2] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:42.829 [http-nio-8080-exec-2] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:42.829 [http-nio-8080-exec-2] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:44.412 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:44.413 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:44.417 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:44.417 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:44.418 [http-nio-8080-exec-4] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:44.418 [http-nio-8080-exec-3] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:44.418 [http-nio-8080-exec-4] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:44.418 [http-nio-8080-exec-3] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:44.433 [http-nio-8080-exec-4] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:44.433 [http-nio-8080-exec-4] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:44.434 [http-nio-8080-exec-4] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:44.435 [http-nio-8080-exec-3] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:44.435 [http-nio-8080-exec-3] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:44.435 [http-nio-8080-exec-3] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:45.088 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:45.090 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:45.090 [http-nio-8080-exec-5] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:45.090 [http-nio-8080-exec-5] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:45.091 [http-nio-8080-exec-5] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:45.091 [http-nio-8080-exec-5] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:45.091 [http-nio-8080-exec-5] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:47.558 [http-nio-8080-exec-6] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:47.558 [http-nio-8080-exec-7] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:47.559 [http-nio-8080-exec-6] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:47.559 [http-nio-8080-exec-7] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:47.560 [http-nio-8080-exec-7] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:47.561 [http-nio-8080-exec-7] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:47.561 [http-nio-8080-exec-7] INFO  c.itheima.controller.EmpController - 查询所有员工
+2026-03-23 16:38:47.572 [http-nio-8080-exec-7] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:47.573 [http-nio-8080-exec-7] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:47.573 [http-nio-8080-exec-7] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:47.581 [http-nio-8080-exec-6] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:47.583 [http-nio-8080-exec-6] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:47.587 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:38:47.589 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@2071387281 wrapping com.mysql.cj.jdbc.ConnectionImpl@bfc879a] for JDBC transaction
+2026-03-23 16:38:47.592 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@2071387281 wrapping com.mysql.cj.jdbc.ConnectionImpl@bfc879a] to manual commit
+2026-03-23 16:38:47.744 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:38:47.746 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@2071387281 wrapping com.mysql.cj.jdbc.ConnectionImpl@bfc879a]
+2026-03-23 16:38:47.749 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@2071387281 wrapping com.mysql.cj.jdbc.ConnectionImpl@bfc879a] after transaction
+2026-03-23 16:38:47.749 [http-nio-8080-exec-6] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:38:47.752 [http-nio-8080-exec-6] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:47.753 [http-nio-8080-exec-6] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:47.753 [http-nio-8080-exec-6] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:49.412 [http-nio-8080-exec-8] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:49.414 [http-nio-8080-exec-8] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:49.417 [http-nio-8080-exec-8] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:49.417 [http-nio-8080-exec-8] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:49.417 [http-nio-8080-exec-8] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:38:49.423 [http-nio-8080-exec-8] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:49.423 [http-nio-8080-exec-8] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:49.423 [http-nio-8080-exec-8] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:54.037 [http-nio-8080-exec-9] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:54.038 [http-nio-8080-exec-9] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:54.054 [http-nio-8080-exec-9] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:54.054 [http-nio-8080-exec-9] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:54.094 [http-nio-8080-exec-9] WARN  com.itheima.aop.OperationLogAspect - JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:38:54.095 [http-nio-8080-exec-9] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=205, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:38:54.121 [http-nio-8080-exec-9] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:54.123 [http-nio-8080-exec-9] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:54.123 [http-nio-8080-exec-9] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:38:54.133 [http-nio-8080-exec-10] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:38:54.135 [http-nio-8080-exec-10] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:38:54.136 [http-nio-8080-exec-10] INFO  com.itheima.aop.MyAspect1 - 开始记录日志...
+2026-03-23 16:38:54.138 [http-nio-8080-exec-10] INFO  com.itheima.aop.MyAspect1 - Before...
+2026-03-23 16:38:54.138 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:38:54.138 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@1490503797 wrapping com.mysql.cj.jdbc.ConnectionImpl@62b3af07] for JDBC transaction
+2026-03-23 16:38:54.139 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@1490503797 wrapping com.mysql.cj.jdbc.ConnectionImpl@62b3af07] to manual commit
+2026-03-23 16:38:54.141 [Thread-1] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：62ms
+2026-03-23 16:38:54.172 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:38:54.172 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1490503797 wrapping com.mysql.cj.jdbc.ConnectionImpl@62b3af07]
+2026-03-23 16:38:54.173 [http-nio-8080-exec-10] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1490503797 wrapping com.mysql.cj.jdbc.ConnectionImpl@62b3af07] after transaction
+2026-03-23 16:38:54.173 [http-nio-8080-exec-10] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=205, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:38:54.174 [http-nio-8080-exec-10] INFO  com.itheima.aop.MyAspect1 - AfterReturning...
+2026-03-23 16:38:54.174 [http-nio-8080-exec-10] INFO  com.itheima.aop.MyAspect1 - After...
+2026-03-23 16:38:54.174 [http-nio-8080-exec-10] INFO  com.itheima.aop.MyAspect1 - 结束记录日志...
+2026-03-23 16:39:30.563 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-23 16:39:30.569 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-23 16:39:30.573 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-23 16:39:30.580 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-23 16:39:37.507 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 29288 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-23 16:39:37.514 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-23 16:39:39.482 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-23 16:39:39.508 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:39:39.512 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-23 16:39:39.513 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-23 16:39:39.584 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1952 ms
+2026-03-23 16:39:40.901 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:39:40.928 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-23 16:39:40.935 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.094 seconds (process running for 5.819)
+2026-03-23 16:40:13.658 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-23 16:40:13.660 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-23 16:40:13.664 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-23 16:40:13.705 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:40:14.233 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:40:14.263 [http-nio-8080-exec-1] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:40:14.313 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-23 16:40:14.814 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@302bb973
+2026-03-23 16:40:14.817 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-23 16:40:15.713 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:40:15.713 [http-nio-8080-exec-7] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:40:15.714 [http-nio-8080-exec-7] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:40:15.714 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:40:15.716 [http-nio-8080-exec-2] INFO  c.itheima.controller.EmpController - 查询所有员工
+2026-03-23 16:40:15.743 [http-nio-8080-exec-7] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:40:15.745 [http-nio-8080-exec-7] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@836132898 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] for JDBC transaction
+2026-03-23 16:40:15.747 [http-nio-8080-exec-7] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@836132898 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] to manual commit
+2026-03-23 16:40:15.892 [http-nio-8080-exec-7] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:40:15.893 [http-nio-8080-exec-7] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@836132898 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973]
+2026-03-23 16:40:15.899 [http-nio-8080-exec-7] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@836132898 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] after transaction
+2026-03-23 16:40:15.899 [http-nio-8080-exec-7] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=205, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:40:16.798 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:40:16.799 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:40:16.800 [http-nio-8080-exec-4] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:40:20.887 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:40:20.888 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:40:21.014 [http-nio-8080-exec-5] WARN  com.itheima.aop.OperationLogAspect - JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:40:21.014 [http-nio-8080-exec-5] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:40:21.045 [http-nio-8080-exec-6] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:40:21.046 [http-nio-8080-exec-6] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:40:21.046 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:40:21.046 [Thread-1] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：75ms
+2026-03-23 16:40:21.048 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@512686211 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] for JDBC transaction
+2026-03-23 16:40:21.048 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@512686211 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] to manual commit
+2026-03-23 16:40:21.082 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:40:21.083 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@512686211 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973]
+2026-03-23 16:40:21.085 [http-nio-8080-exec-6] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@512686211 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] after transaction
+2026-03-23 16:40:21.086 [http-nio-8080-exec-6] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:41:50.748 [http-nio-8080-exec-8] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:41:50.748 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:41:50.750 [http-nio-8080-exec-8] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:41:50.750 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:41:50.751 [http-nio-8080-exec-8] INFO  c.itheima.controller.EmpController - 查询所有员工
+2026-03-23 16:41:50.751 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:41:50.753 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@1596107347 wrapping com.mysql.cj.jdbc.ConnectionImpl@1a203fd3] for JDBC transaction
+2026-03-23 16:41:50.753 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@1596107347 wrapping com.mysql.cj.jdbc.ConnectionImpl@1a203fd3] to manual commit
+2026-03-23 16:41:50.789 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:41:50.789 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1596107347 wrapping com.mysql.cj.jdbc.ConnectionImpl@1a203fd3]
+2026-03-23 16:41:50.790 [http-nio-8080-exec-3] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1596107347 wrapping com.mysql.cj.jdbc.ConnectionImpl@1a203fd3] after transaction
+2026-03-23 16:41:50.791 [http-nio-8080-exec-3] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:41:51.491 [http-nio-8080-exec-9] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:41:51.493 [http-nio-8080-exec-9] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:41:51.495 [http-nio-8080-exec-9] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:41:53.688 [http-nio-8080-exec-10] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:41:53.689 [http-nio-8080-exec-10] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:42:21.554 [http-nio-8080-exec-10] WARN  com.itheima.aop.OperationLogAspect - JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:42:21.554 [http-nio-8080-exec-10] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:42:21.573 [Thread-2] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：27872ms
+2026-03-23 16:42:21.579 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:42:21.583 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:42:21.585 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:42:21.585 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@1979290634 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] for JDBC transaction
+2026-03-23 16:42:21.585 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@1979290634 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] to manual commit
+2026-03-23 16:42:21.609 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:42:21.609 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1979290634 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973]
+2026-03-23 16:42:21.611 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1979290634 wrapping com.mysql.cj.jdbc.ConnectionImpl@302bb973] after transaction
+2026-03-23 16:42:21.612 [http-nio-8080-exec-1] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:47:51.400 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:47:51.402 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:47:51.402 [http-nio-8080-exec-2] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:47:53.932 [http-nio-8080-exec-7] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:47:53.934 [http-nio-8080-exec-7] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:48:07.427 [http-nio-8080-exec-7] WARN  com.itheima.aop.OperationLogAspect - JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:48:07.427 [http-nio-8080-exec-7] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:51:06.921 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:51:06.921 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:51:06.922 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:51:06.922 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:51:06.922 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m15s278ms933µs900ns).
+2026-03-23 16:51:13.313 [http-nio-8080-exec-7] ERROR c.i.exception.GlobalExceptionHandler - Could not write JSON: ServletOutputStream failed to flush: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+2026-03-23 16:53:50.358 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m43s436ms94µs800ns).
+2026-03-23 16:53:50.359 [Thread-3] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：192988ms
+2026-03-23 16:53:50.362 [http-nio-8080-exec-6] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:53:50.364 [http-nio-8080-exec-6] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:53:50.366 [http-nio-8080-exec-4] WARN  com.itheima.aop.OperationLogAspect - JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:53:50.366 [http-nio-8080-exec-5] WARN  com.itheima.aop.OperationLogAspect - JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:53:50.366 [http-nio-8080-exec-5] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:53:50.366 [http-nio-8080-exec-4] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:53:50.368 [http-nio-8080-exec-6] WARN  com.itheima.aop.OperationLogAspect - JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:53:50.369 [http-nio-8080-exec-6] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:53:50.389 [http-nio-8080-exec-4] ERROR c.i.exception.GlobalExceptionHandler - Could not write JSON: ServletOutputStream failed to flush: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+2026-03-23 16:53:50.391 [Thread-4] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：163457ms
+2026-03-23 16:53:50.397 [Thread-5] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：163462ms
+2026-03-23 16:53:50.399 [Thread-6] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：21ms
+2026-03-23 16:53:50.440 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-23 16:53:50.448 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-23 16:53:50.454 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-23 16:53:50.461 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-23 16:53:57.441 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 16004 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-23 16:53:57.446 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-23 16:53:59.087 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-23 16:53:59.114 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:53:59.116 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-23 16:53:59.116 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-23 16:53:59.191 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1683 ms
+2026-03-23 16:54:00.404 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:54:00.439 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-23 16:54:00.449 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.604 seconds (process running for 5.712)
+2026-03-23 16:54:08.404 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-23 16:54:08.404 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-23 16:54:08.405 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-23 16:54:08.433 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:54:08.945 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:54:09.163 [http-nio-8080-exec-1] WARN  com.itheima.aop.OperationLogAspect - 方法参数 JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:54:09.165 [http-nio-8080-exec-1] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:54:09.219 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-23 16:54:09.805 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3580f08e
+2026-03-23 16:54:09.811 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-23 16:54:09.879 [http-nio-8080-exec-1] INFO  com.itheima.aop.OperationLogAspect - 操作日志 - 类名:com.itheima.controller.ClazzsController, 方法名:update, 参数:[], 返回值:{"msg":"操作成功","data":null,"code":1}, 耗时:775ms
+2026-03-23 16:54:09.891 [Thread-1] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：775ms
+2026-03-23 16:54:09.950 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:54:09.952 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:54:09.974 [http-nio-8080-exec-2] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:54:09.974 [http-nio-8080-exec-2] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@2033985287 wrapping com.mysql.cj.jdbc.ConnectionImpl@3580f08e] for JDBC transaction
+2026-03-23 16:54:09.982 [http-nio-8080-exec-2] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@2033985287 wrapping com.mysql.cj.jdbc.ConnectionImpl@3580f08e] to manual commit
+2026-03-23 16:54:10.179 [http-nio-8080-exec-2] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:54:10.180 [http-nio-8080-exec-2] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@2033985287 wrapping com.mysql.cj.jdbc.ConnectionImpl@3580f08e]
+2026-03-23 16:54:10.184 [http-nio-8080-exec-2] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@2033985287 wrapping com.mysql.cj.jdbc.ConnectionImpl@3580f08e] after transaction
+2026-03-23 16:54:10.185 [http-nio-8080-exec-2] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:55:03.926 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-23 16:55:03.932 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-23 16:55:03.937 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-23 16:55:03.943 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-23 16:55:07.944 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 16728 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-23 16:55:07.951 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-23 16:55:09.746 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-23 16:55:09.768 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:55:09.772 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-23 16:55:09.772 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-23 16:55:09.853 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1820 ms
+2026-03-23 16:55:11.495 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:55:11.522 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-23 16:55:11.531 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 4.211 seconds (process running for 6.586)
+2026-03-23 16:55:25.798 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-23 16:55:25.799 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-23 16:55:25.801 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-23 16:55:25.834 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:55:26.285 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:55:26.309 [http-nio-8080-exec-1] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:55:26.339 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-23 16:55:26.839 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f566535
+2026-03-23 16:55:26.843 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-23 16:55:28.231 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:55:28.232 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:55:28.232 [http-nio-8080-exec-3] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:55:33.617 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:55:33.621 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:55:45.664 [http-nio-8080-exec-2] WARN  com.itheima.aop.OperationLogAspect - 方法参数 JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:55:45.664 [http-nio-8080-exec-2] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:56:00.216 [http-nio-8080-exec-2] INFO  com.itheima.aop.OperationLogAspect - 操作日志 - 类名:com.itheima.controller.ClazzsController, 方法名:update, 参数:[], 返回值:{"msg":"操作成功","data":null,"code":1}, 耗时:11976ms
+2026-03-23 16:56:00.231 [Thread-1] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：11976ms
+2026-03-23 16:56:00.236 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:56:00.238 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:56:00.264 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:56:00.265 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@1217112022 wrapping com.mysql.cj.jdbc.ConnectionImpl@1f566535] for JDBC transaction
+2026-03-23 16:56:00.268 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@1217112022 wrapping com.mysql.cj.jdbc.ConnectionImpl@1f566535] to manual commit
+2026-03-23 16:56:00.389 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:56:00.390 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1217112022 wrapping com.mysql.cj.jdbc.ConnectionImpl@1f566535]
+2026-03-23 16:56:00.391 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1217112022 wrapping com.mysql.cj.jdbc.ConnectionImpl@1f566535] after transaction
+2026-03-23 16:56:00.392 [http-nio-8080-exec-5] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 16:56:12.802 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-23 16:56:12.808 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-23 16:56:12.813 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-23 16:56:12.821 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-23 16:56:16.436 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 26568 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-23 16:56:16.439 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-23 16:56:18.120 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-23 16:56:18.145 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:56:18.148 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-23 16:56:18.149 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-23 16:56:18.218 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1706 ms
+2026-03-23 16:56:19.357 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-23 16:56:19.378 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-23 16:56:19.385 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.613 seconds (process running for 5.417)
+2026-03-23 16:56:23.553 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-23 16:56:23.553 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-23 16:56:23.558 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-03-23 16:56:23.603 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:56:24.132 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:56:24.158 [http-nio-8080-exec-1] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:56:24.190 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-23 16:56:24.675 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@109e6456
+2026-03-23 16:56:24.681 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-23 16:56:25.670 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:56:25.673 [http-nio-8080-exec-4] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:56:25.675 [http-nio-8080-exec-4] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 16:56:27.632 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:56:27.634 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:56:40.201 [http-nio-8080-exec-3] WARN  com.itheima.aop.OperationLogAspect - 方法参数 JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:56:40.201 [http-nio-8080-exec-3] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:58:06.436 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s650ms590µs500ns).
+2026-03-23 16:58:06.439 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:58:06.439 [http-nio-8080-exec-3] INFO  com.itheima.aop.OperationLogAspect - 操作日志 - 类名:com.itheima.controller.ClazzsController, 方法名:update, 参数:[], 返回值:{"msg":"操作成功","data":null,"code":1}, 耗时:12484ms
+2026-03-23 16:58:06.441 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:58:11.005 [Thread-1] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：12484ms
+2026-03-23 16:58:11.006 [http-nio-8080-exec-2] WARN  com.itheima.aop.OperationLogAspect - 方法参数 JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 16:58:11.008 [http-nio-8080-exec-2] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 16:58:11.558 [http-nio-8080-exec-2] INFO  com.itheima.aop.OperationLogAspect - 操作日志 - 类名:com.itheima.controller.ClazzsController, 方法名:update, 参数:[], 返回值:{"msg":"操作成功","data":null,"code":1}, 耗时:4569ms
+2026-03-23 16:58:11.571 [Thread-2] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：4569ms
+2026-03-23 16:58:11.579 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 16:58:11.581 [http-nio-8080-exec-5] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 16:58:11.606 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 16:58:11.608 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@919786146 wrapping com.mysql.cj.jdbc.ConnectionImpl@109e6456] for JDBC transaction
+2026-03-23 16:58:11.611 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@919786146 wrapping com.mysql.cj.jdbc.ConnectionImpl@109e6456] to manual commit
+2026-03-23 16:58:11.711 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 16:58:11.711 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@919786146 wrapping com.mysql.cj.jdbc.ConnectionImpl@109e6456]
+2026-03-23 16:58:11.716 [http-nio-8080-exec-5] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@919786146 wrapping com.mysql.cj.jdbc.ConnectionImpl@109e6456] after transaction
+2026-03-23 16:58:11.716 [http-nio-8080-exec-5] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=1051, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 17:00:22.407 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-23 17:00:22.413 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-23 17:00:22.418 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-23 17:00:22.425 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-23 17:00:28.233 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 27280 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-23 17:00:28.236 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-23 17:00:30.053 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-23 17:00:30.071 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-23 17:00:30.075 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-23 17:00:30.075 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-23 17:00:30.155 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1859 ms
+2026-03-23 17:00:31.538 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-23 17:00:31.566 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-23 17:00:31.572 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.969 seconds (process running for 5.584)
+2026-03-23 17:00:40.308 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-23 17:00:40.308 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-23 17:00:40.313 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-23 17:00:40.343 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 17:00:40.775 [http-nio-8080-exec-2] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 17:00:40.804 [http-nio-8080-exec-2] INFO  c.i.controller.ClazzsController - 查询班级,参数:4
+2026-03-23 17:00:40.859 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-23 17:00:41.402 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fde1887
+2026-03-23 17:00:41.406 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-23 17:00:44.074 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 17:00:44.078 [http-nio-8080-exec-3] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 17:00:49.524 [http-nio-8080-exec-3] WARN  com.itheima.aop.OperationLogAspect - 方法参数 JSON 序列化失败：Java 8 date/time type `java.time.LocalDate` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (or disable `MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES`) (through reference chain: com.itheima.pojo.Clazz[0]->com.itheima.pojo.Clazz["beginDate"])
+2026-03-23 17:00:49.524 [http-nio-8080-exec-3] INFO  c.i.controller.ClazzsController - 修改班级:Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=1, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=null, status=null)
+2026-03-23 17:00:49.930 [http-nio-8080-exec-3] INFO  com.itheima.aop.OperationLogAspect - 操作日志 - 类名:com.itheima.controller.ClazzsController, 方法名:update, 参数:[], 返回值:{"msg":"操作成功","data":null,"code":1}, 耗时:5348ms
+2026-03-23 17:00:49.942 [Thread-1] INFO  com.itheima.aop.OperationLogAspect - 操作日志保存成功：com.itheima.controller.ClazzsController.update - 耗时：5348ms
+2026-03-23 17:00:49.945 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 执行方法 doFilter
+2026-03-23 17:00:49.947 [http-nio-8080-exec-1] INFO  c.i.interceptor.TokenInterceptor - 令牌校验通过,放行
+2026-03-23 17:00:49.981 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Creating new transaction with name [com.itheima.service.impl.ClazzsServiceImpl.findAllClazzs]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,-java.lang.Exception
+2026-03-23 17:00:49.989 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Acquired Connection [HikariProxyConnection@692762679 wrapping com.mysql.cj.jdbc.ConnectionImpl@3fde1887] for JDBC transaction
+2026-03-23 17:00:49.997 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Switching JDBC Connection [HikariProxyConnection@692762679 wrapping com.mysql.cj.jdbc.ConnectionImpl@3fde1887] to manual commit
+2026-03-23 17:00:50.154 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Initiating transaction commit
+2026-03-23 17:00:50.156 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@692762679 wrapping com.mysql.cj.jdbc.ConnectionImpl@3fde1887]
+2026-03-23 17:00:50.161 [http-nio-8080-exec-1] DEBUG o.s.j.support.JdbcTransactionManager - Releasing JDBC Connection [HikariProxyConnection@692762679 wrapping com.mysql.cj.jdbc.ConnectionImpl@3fde1887] after transaction
+2026-03-23 17:00:50.161 [http-nio-8080-exec-1] INFO  c.i.controller.ClazzsController - PageResult(total=4, rows=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, reasonable=false, pageSizeZero=false}[Clazz(id=4, name=JavaEE就业166期, room=105, beginDate=2024-07-20, endDate=2024-02-20, masterId=20, subject=null, createTime=2024-06-01T17:46:10, updateTime=2024-06-01T17:46:10, masterName=阮小二, status=已毕业), Clazz(id=3, name=JavaEE就业165期, room=108, beginDate=2024-06-15, endDate=2024-12-25, masterId=6, subject=null, createTime=2024-06-01T17:45:40, updateTime=2024-06-01T17:45:40, masterName=扈三娘, status=已毕业), Clazz(id=2, name=前端就业90期, room=210, beginDate=2024-07-10, endDate=2024-01-20, masterId=3, subject=null, createTime=2024-06-01T17:45:12, updateTime=2024-06-01T17:45:12, masterName=卢俊义, status=已毕业), Clazz(id=1, name=JavaEE就业163期, room=212, beginDate=2024-04-30, endDate=2024-06-29, masterId=10, subject=null, createTime=2024-06-01T17:08:23, updateTime=2024-06-01T17:39:58, masterName=林冲, status=已毕业)])
+2026-03-23 17:29:23.899 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-23 17:29:23.905 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-23 17:29:23.910 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-23 17:29:23.912 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-23 17:29:30.299 [main] INFO  c.i.TliasWebManagementApplication - Starting TliasWebManagementApplication using Java 21.0.10 with PID 17296 (D:\SHEN\projects\java\web-project\springboot-web-02\tlias-web-management\target\classes started by SHEN in D:\SHEN\projects\java\web-project\springboot-web-02)
+2026-03-23 17:29:30.303 [main] INFO  c.i.TliasWebManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-23 17:29:31.811 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-23 17:29:31.829 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-23 17:29:31.831 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-23 17:29:31.831 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-23 17:29:31.903 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1534 ms
+2026-03-23 17:29:32.959 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-23 17:29:32.982 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-23 17:29:32.988 [main] INFO  c.i.TliasWebManagementApplication - Started TliasWebManagementApplication in 3.292 seconds (process running for 5.025)

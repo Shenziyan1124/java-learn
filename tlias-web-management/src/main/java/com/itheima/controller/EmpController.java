@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.itheima.anno.Log;
 import com.itheima.pojo.*;
 import com.itheima.service.EmpService;
 import lombok.extern.slf4j.Slf4j;
@@ -39,6 +40,7 @@ public class EmpController {
      * @return
      */
     @PostMapping
+    @Log
     public Result addEmp(@RequestBody Emp emp) {
         log.info("添加员工,参数:{}", emp);
         empService.addEmp(emp);
@@ -60,6 +62,7 @@ public class EmpController {
 //    }
 
     @DeleteMapping
+    @Log
     public Result delete(@RequestParam List<Integer> ids) {
         log.info("删除员工,参数:{}", ids);
         empService.deleteEmp(ids);
@@ -84,6 +87,7 @@ public class EmpController {
      * @return
      */
     @PutMapping
+    @Log
     public Result update(@RequestBody Emp emp) {
         log.info("修改员工,参数:{}", emp);
         empService.updateEmp(emp);

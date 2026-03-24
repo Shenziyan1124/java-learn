@@ -14,7 +14,7 @@ import java.util.UUID;
 
 @Slf4j
 @RestController
-public class UploadController {
+public class  UploadController {
 
     /**
      * 本地文件上传

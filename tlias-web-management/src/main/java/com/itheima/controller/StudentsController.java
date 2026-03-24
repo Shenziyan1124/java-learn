@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.itheima.anno.Log;
 import com.itheima.pojo.PageResult;
 import com.itheima.pojo.Result;
 import com.itheima.pojo.Student;
@@ -52,6 +53,7 @@ public class StudentsController {
      * 修改学生信息
      */
     @PutMapping
+    @Log
     public Result update(@RequestBody Student student) {
         log.info("修改学生信息 (PUT):{}", student);
         studentsService.updateStudentById(student);
@@ -62,6 +64,7 @@ public class StudentsController {
      * 添加或修改学生信息 - 兼容前端
      */
     @PostMapping
+    @Log
     public Result save(@RequestBody Student student) {
         log.info("保存学生信息:{}", student);
 
@@ -82,6 +85,7 @@ public class StudentsController {
      * 删除学生信息
      */
     @DeleteMapping("/{ids}")
+    @Log
     public Result delete(@PathVariable String ids) {
         log.info("删除学生信息:{}", ids);
 

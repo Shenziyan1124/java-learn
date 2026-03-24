@@ -1,5 +1,6 @@
 package com.itheima.filter;
 
+import com.itheima.utils.CurrentHolder;
 import com.itheima.utils.JwtUtils;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.*;
@@ -43,8 +44,11 @@ public class TokenFilter implements Filter {
 
         //5.如果token 存在,校验令牌,失败返回错误信息401
         try {
-            JwtUtils.parseToken(token);
-        }catch (Exception e){
+            Claims claims = JwtUtils.parseToken(token);
+            Integer empId = Integer.valueOf(claims.get("id").toString());
+            CurrentHolder.setCurrentId(empId);
+            log.info("当前用户id:{}", empId);
+        } catch (Exception e) {
             response.setStatus(401);
             return;
         }
@@ -52,6 +56,7 @@ public class TokenFilter implements Filter {
         //6.校验通过,放行
         log.info("令牌校验通过,放行");
         filterChain.doFilter(request, response);
+        CurrentHolder.remove();
 
     }
 }

@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.itheima.JwtTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.617 s <<< FAILURE! -- in com.itheima.JwtTest
+com.itheima.JwtTest.testParseJwt -- Time elapsed: 0.058 s <<< ERROR!
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-03-20T11:34:22Z. Current time: 2026-03-20T16:35:26Z, a difference of 18064107 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.itheima.JwtTest.testParseJwt(JwtTest.java:31)
+
